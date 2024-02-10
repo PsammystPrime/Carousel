@@ -1,4 +1,15 @@
-const imageArray = ['one', 'two','three' , 'four'];
+// const imageArray = ['one', 'two','three' , 'four'];
+
+const one = document.createElement('img')
+one.src = './Gamer_girl.png'
+const two = document.createElement('img')
+two.src = './alien.jpg'
+const three = document.createElement('img')
+three.src = './exotic.png'
+const four = document.createElement('img')
+four.src = 'Beautiful.jpg'
+
+const imageArray = [one, two, three, four];
 
 index = 0
 const next = document.querySelector('.next')
@@ -12,5 +23,5 @@ function nextImg(){
        index++  
     }
 
-    display.textContent = index
+    display.appendChild(imageArray[index]) /*imageArray[index]*/
 }
