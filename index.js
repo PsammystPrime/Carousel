@@ -1,4 +1,3 @@
-
 //Initialize your images
 const one = document.createElement('img')
 one.src = './Gamer_girl.png'
@@ -10,8 +9,9 @@ const four = document.createElement('img')
 four.src = 'Beautiful.jpg'
 const five = document.createElement('img')
 five.src = 'bridge.png'
+const six = document.querySelector('.homeImg')
 //Push them to an array
-const imageArray = [one, two, three, four, five];
+const imageArray = [one, two, three, four, five, six];
 
 const display = document.querySelector('.display');
 const next = document.querySelector('.next');
@@ -21,26 +21,21 @@ prev.addEventListener('click', prevImg);
 index = 0;
 
 function nextImg(){
-    if (index === 4) {
+    if (index === 5) {
         index = 0
     } else {
        index++  
     }
     display.innerHTML = ''
     display.appendChild(imageArray[index]) 
-    console.log(index)
-
 }
 function prevImg() {
     if (index === 0) {
         index = imageArray.length - 1
-    console.log(imageArray.length)
-
     }
     else{
         index --
     }
     display.innerHTML = ''
     display.appendChild(imageArray[index])
-    console.log(index)
 }
